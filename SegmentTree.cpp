@@ -29,8 +29,8 @@ T accumulateSegment(size_t L, size_t R){ //[L....R) //If L == R this returns new
     L++;
     R--;
     while (L!=R){
-        if (R & 1) {rightSummand = op(data[R-2],rightSummand); cout<<R-2<<" "; R--;}
-        if (L & 1) {leftSummand = op(leftSummand,data[L-1]); cout<<L-1<<" "; L++;}
+        if (R & 1) {rightSummand = op(data[R-2],rightSummand); R--;}
+        if (L & 1) {leftSummand = op(leftSummand,data[L-1]); L++;}
         L/=2;
         R/=2;
     }
